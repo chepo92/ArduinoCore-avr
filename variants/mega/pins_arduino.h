@@ -25,7 +25,7 @@
 
 #include <avr/pgmspace.h>
 
-#define NUM_DIGITAL_PINS            70
+#define NUM_DIGITAL_PINS            80
 #define NUM_ANALOG_INPUTS           16
 #define analogInputToDigitalPin(p)  ((p < 16) ? (p) + 54 : -1)
 #define digitalPinHasPWM(p)         (((p) >= 2 && (p) <= 13) || ((p) >= 44 && (p)<= 46))
@@ -231,7 +231,17 @@ const uint8_t PROGMEM digital_pin_to_port_PGM[] = {
 	PK	, // PK 4 ** 66 ** A12	
 	PK	, // PK 5 ** 67 ** A13	
 	PK	, // PK 6 ** 68 ** A14	
-	PK	, // PK 7 ** 69 ** A15	
+	PK	, // PK 7 ** 69 ** A15
+        PG      , // PG 4 ** 70 **
+        PG      , // PG 3 ** 71 **
+        PJ      , // PJ 2 ** 72 **
+        PJ      , // PJ 3 ** 73 **
+        PJ      , // PJ 7 ** 74 **
+        PJ      , // PJ 4 ** 75 **
+        PJ      , // PJ 5 ** 76 **
+        PJ      , // PJ 6 ** 77 **
+        PE      , // PE 2 ** 78 **
+        PE      , // PE 6 ** 79 **	
 };
 
 const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
@@ -306,7 +316,17 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 	_BV( 4 )	, // PK 4 ** 66 ** A12	
 	_BV( 5 )	, // PK 5 ** 67 ** A13	
 	_BV( 6 )	, // PK 6 ** 68 ** A14	
-	_BV( 7 )	, // PK 7 ** 69 ** A15	
+	_BV( 7 )	, // PK 7 ** 69 ** A15
+        _BV( 4 )        , // PG 4 ** 70 **
+        _BV( 3 )        , // PG 3 ** 71 **
+        _BV( 2 )        , // PJ 2 ** 72 **
+        _BV( 3 )        , // PJ 3 ** 73 **
+        _BV( 7 )        , // PJ 7 ** 74 **
+        _BV( 4 )        , // PJ 4 ** 75 **
+        _BV( 5 )        , // PJ 5 ** 76 **
+        _BV( 6 )        , // PJ 6 ** 77 **
+        _BV( 2 )        , // PE 2 ** 78 **
+        _BV( 6 )        , // PE 6 ** 79 **	
 };
 
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
@@ -381,7 +401,17 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	NOT_ON_TIMER	, // PK 4 ** 66 ** A12	
 	NOT_ON_TIMER	, // PK 5 ** 67 ** A13	
 	NOT_ON_TIMER	, // PK 6 ** 68 ** A14	
-	NOT_ON_TIMER	, // PK 7 ** 69 ** A15	
+	NOT_ON_TIMER	, // PK 7 ** 69 ** A15
+        NOT_ON_TIMER    , // PG 4 ** 70 **
+        NOT_ON_TIMER    , // PG 3 ** 71 **
+        NOT_ON_TIMER    , // PJ 2 ** 72 **
+        NOT_ON_TIMER    , // PJ 3 ** 73 **
+        NOT_ON_TIMER    , // PJ 7 ** 74 **
+        NOT_ON_TIMER    , // PJ 4 ** 75 **
+        NOT_ON_TIMER    , // PJ 5 ** 76 **
+        NOT_ON_TIMER    , // PJ 6 ** 77 **
+        NOT_ON_TIMER    , // PE 2 ** 78 **
+        NOT_ON_TIMER    , // PE 6 ** 79 **	
 };
 
 #endif
